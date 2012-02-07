@@ -1459,6 +1459,8 @@ ul#navigation_bar li a:active {
 	transition: 				none;
 }
 
-
+#checkout.new-checkout {
+	margin-right: 20px;
+}
 
 
