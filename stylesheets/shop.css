@@ -1376,6 +1376,10 @@ ul#navigation_bar li a {
 	border-radius: 4px 4px 0 0;
 	text-decoration: none;
 } 
+ul#navigation_bar li.current-page a {
+	background: #787878;
+	color: white;
+}
 ul#navigation_bar li a:hover {
 	background-image: none;
 	background-color: #1b719b;
@@ -1386,8 +1390,6 @@ ul#navigation_bar li a:active {
 	color: #fff;
 	background-image: none;
 	background-color: #444;
-	margin-top: -2px;
-	padding: 5px 11px 9px;
 	-webkit-transition: none;
 	-moz-transition: 		none;
 	-o-transition: 			none;
