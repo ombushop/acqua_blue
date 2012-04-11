@@ -398,7 +398,7 @@ body.two-col #content {
   display: block;
   float: left;
   width: 700px;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 20px;
   	border-top: 2px solid #787878;
 }
 body #content.no-left-col {
@@ -880,13 +880,16 @@ ul.product-listing li.product {
   -o-transition: 				all 200ms ease-out;
   transition: 					all 200ms ease-out;
 }
-.product-listing li:hover {
+ul.product-listing li.product:hover {
   -moz-box-shadow:    0 2px 9px #7a7a7a;
   -webkit-box-shadow: 0 2px 9px #7a7a7a;
   box-shadow:         0 2px 9px #7a7a7a;
 	background: #F8F8F8;
 }
-.product-listing li.three {
+ul.product-listing li.product:hover .product-name a, ul.product-listing li.product:hover .product-price a {
+	background: #FAFCC3;
+}
+ul.product-listing li.product.three {
 	/*margin-right: 0;*/
 }
 ul.product-listing li.product a.image-link-container {
@@ -908,7 +911,7 @@ ul.product-listing li.product a.image-link-container img {
 	-o-border-radius:      3px;
 	border-radius:         3px;
 }
-.product-listing li a {
+ul.product-listing li.product a {
   display: block;
   text-decoration: none;
   color: #111111;
@@ -929,20 +932,20 @@ ul.product-listing li.product .product-name a{
 }
 ul.product-listing li.product .product-price a {
 	display: block;
-	color: #666;
+	color: #1B719B;
 	font-size: 15px;
 }
 
-.product-listing li a.info span { display: block; }
-.product-listing li:hover { border-color: gold; }
-.product-listing li a.info {
+ul.product-listing li.product a.info span { display: block; }
+ul.product-listing li.productli:hover { border-color: gold; }
+ul.product-listing li.product a.info {
 	-webkit-transition: 	all 200ms ease-out;
 	-moz-transition: 			all 200ms ease-out;
 	-o-transition: 				all 200ms ease-out;
 	transition: 					all 200ms ease-out;
 	
 }
-.product-listing li:hover a.info {
+ul.product-listing li.productli:hover a.info {
 	background-color: #fafcc3;
 }
 
@@ -1378,7 +1381,7 @@ h2#head_logo span {
 	float: left;
 	border-top: 2px solid #787878;
 	padding-top: 7px;
-	width: 220px;
+	width: 210px;
 }
 #ombu-footer {
 	display: none !important;
