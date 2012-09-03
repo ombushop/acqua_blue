@@ -65,7 +65,7 @@
   </div>
 
   <div id="cart-form">
-  
+
     <form accept-charset="UTF-8" action="/orders/populate" method="post">
       <input name="utf8" type="hidden" value="✓">
 
@@ -74,14 +74,14 @@
       </p>
 
       <input id="order_product_id" name="order[product_id]" type="hidden" value="{{ product.id }}">
-    
+
       {% if product.has_variants? %}
         <div id="product-variants">
           {% for option_type in product.possible_options %}
             <input id="order_option_types[{{ forloop.index }}]" name="order[option_types[{{ forloop.index }}]]" type="hidden" value="{{ option_type.id }}">
-            <label for="order_option_types_{{ option_type.id }}">{{ option_type.name }}</label>        
+            <label for="order_option_types_{{ option_type.id }}">{{ option_type.name }}</label>
             <select id="order_option_types_{{ option_type.id }}" name="order[option_types_{{ option_type.id }}]">
-            
+
               {% for possible_value in option_type.possible_values %}
                 <option value="{{ possible_value.id }}">{{ possible_value.name }}</option>
               {% endfor %}
@@ -104,7 +104,7 @@
           <img alt="Visa" src="/images/medios_de_pago/Visa.gif">
           <img alt="Master" src="/images/medios_de_pago/Master.gif">
           <img alt="Amex" src="/images/medios_de_pago/Amex.gif">
-          <img alt="Pagofacil" src="/images/medios_de_pago/PagoFacil.gif">          
+          <img alt="Pagofacil" src="/images/medios_de_pago/PagoFacil.gif">
           <br>
           <span id="read-more">Ver más</span>
         </div>
@@ -115,7 +115,7 @@
           <img alt="Shopping" src="/images/medios_de_pago/Shopping.gif">
           <img alt="Italcred" src="/images/medios_de_pago/Italcred.gif">
           <img alt="Rapipago" src="/images/medios_de_pago/Rapipago.gif">
-          <img alt="Cobroexpress" src="/images/medios_de_pago/CobroExpress.gif">          
+          <img alt="Cobroexpress" src="/images/medios_de_pago/CobroExpress.gif">
         </div>
         <script type="text/javascript" charset="utf-8">
           $("#read-more").click(function () {
@@ -139,7 +139,6 @@
 				</div>
 				<!-- end - twitter tweet button -->
 			</div>
-    
     </form>
 
   </div>
