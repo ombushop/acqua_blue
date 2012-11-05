@@ -570,7 +570,12 @@ ul.navigation-list li ul {
   color: #666666;
 }
 .breadcrumbs ul li span { color: #333333; }
-div#login-bar { float: right; }
+div#login-bar {
+	width: 960px;
+	display: block;
+	text-align: right;
+	margin: 0 auto;
+}
 ul#language-bar {
   list-style-type: none;
   margin: 0px;
@@ -1329,13 +1334,13 @@ h2#head_logo span {
 }
 /* -----------------------| TOPBAR |---- */
 .top-bar{
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: #333;
 	overflow:hidden;
-    width: 100%;
-    z-index: 10;
-    padding: 5px 0;
-		border-bottom: 1px solid #165e80;
-	}
+	width: 100%;
+	z-index: 10;
+	padding: 0;
+	box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px;
+}
 .login{
 	margin: 0px auto;
 	text-align:right;
@@ -1366,16 +1371,8 @@ h2#head_logo span {
 	background-color: #23DB89;
 	text-shadow: 0 -1px 0 #0DC27B;
 }
-.top-bar a {
-	color: white;
-	margin: 10px;
+#login-bar a {
 	text-decoration: none;
-	padding: 3px;
-	border-radius: 2px;
-}
-.top-bar a:hover {
-	background-color: #ffffff;
-	color: #1b719b;
 }
 #sidebar {
 	float: left;
