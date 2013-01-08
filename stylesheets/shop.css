@@ -972,6 +972,15 @@ ul.product-listing li.productli:hover a.info {
 	margin-right: -20px;
 	width: 107px;
 }
+#content.index div.social-container a.pin-it-button, #content.index div.social-container a {
+	display: block;
+	float: right;
+	margin-right: -20px;
+	width: 107px;
+}
+div.in-product-social-container {
+  margin: 20px 0;
+}
 
 /* === */
 
