@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
   <head>
     <title>{{ shop.main_page_title }}</title>
@@ -11,6 +11,8 @@
     {{ 'basic.css' | stylesheet_tag }}
     {{ 'buttons.css' | stylesheet_tag }}
     {{ 'advice.css' | stylesheet_tag }}
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,100|Roboto:400,100,100italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
 
     {{ 'shop.css' | asset_url | stylesheet_tag }}
     {{ 'products.css' | asset_url | stylesheet_tag }}
@@ -125,7 +127,7 @@
                 </div>
                 <label for="keywords">Buscar:</label>
                 <input id="keywords" name="keywords" type="text" value="{{ keywords }}">
-                <input type="submit" value="Buscar">
+                <input type="submit" class="search-button" value="Buscar">
             </form>
           </div>      
 					

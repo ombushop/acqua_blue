@@ -1,3 +1,6 @@
+/* @override 
+	http://probandomails.local/assets/stylesheets/48/shop.css */
+
 /* 
 **************************************
 OmbuShop - Tu Tienda Online
@@ -25,10 +28,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
   background: #fff;
   color: #333;
-  font: Helvetica;
-  font-family: Helvetica, Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font: 400 15px/1.5 'Roboto', Arial, 'Helvetica', sans-serif;
 }
 ol, ul {  list-style: none }
 table {
@@ -83,11 +83,14 @@ hr.space {
 html[xmlns] .clearfix {  display: block }
 * html .clearfix {  height: 1% }
 html {  background-color: #1b719b }
-#all {  background-color: #1b719b }
+#all {
+  background-color: #1b719b;
+  padding-bottom: 20px;
+}
 #page {
-  -webkit-box-shadow: 1px 1px 15px #000;
-  -moz-box-shadow:    1px 1px 15px #000;
-  box-shadow:         1px 1px 15px #000;
+  -webkit-box-shadow: rgba(0,0,0,.5) 1px 3px 5px;
+  -moz-box-shadow:    rgba(0,0,0,.5) 1px 3px 5px;
+  box-shadow:         rgba(0,0,0,.5) 1px 3px 5px;
   -webkit-border-radius: 20px;
   -moz-border-radius:    20px;
   border-radius:         20px;
@@ -100,25 +103,18 @@ html {  background-color: #1b719b }
 
 /* === TITULOS */
 h1 {
-  border-bottom: 1px solid #e3e3e3;
-  color: #aeaeae;
-  font-size: 2.5em;
-  font-weight: 400;
-  line-height: 1;
+  border-bottom: 1px dashed #6c6c6c;
   margin-bottom: .5em;
   padding-bottom: 9px;
+  font: 100 4em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
 }
 body#product-details h1 {
-  border-bottom: 1px solid #e3e3e3;
   border-top: 2px solid #787878;
-  color: #aeaeae;
-  font-size: 2em;
-  font-weight: 400;
-  line-height: 1;
+  border-bottom: 1px dashed #6c6c6c;
+  padding-top: 30px;
   margin-bottom: .5em;
-  margin-top: 0;
   padding-bottom: 9px;
-  padding-top: 20px;
+  font: 100 4em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
 }
 h1 img {  margin: 0 }
 h2 {
@@ -157,6 +153,8 @@ h3 img {  margin: 0 }
 h4 img {  margin: 0 }
 h5 img {  margin: 0 }
 h6 img {  margin: 0 }
+
+/* === OTROS GENERICOS */
 p {  margin: 0 0 1.5em }
 p img.left {
   display: inline;
@@ -242,6 +240,8 @@ legend {
   font-weight: 700;
   margin-bottom: .5em;
 }
+
+/* === LAYOUT */
 #cart_bar {
   float: right;
   margin: 0;
@@ -313,12 +313,15 @@ body.two-col #content {
   width: 700px;
 }
 body #content.no-left-col {
-  display: inline;
+  display: block;
   float: left;
   margin-left: 0;
   padding-left: 220px;
   padding-top: 30px;
-  width: auto;
+  width: 69%;
+}
+body #content.no-left-col.page {
+  padding-right: 70px;
 }
 
 /* === HEADER */
@@ -547,7 +550,7 @@ button, a.button, input.button {
   color: #111;
   cursor: pointer;
   display: inline-block;
-  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  font-family: 'Roboto', Arial, 'Helvetica', sans-serif;
   font-size: 1.1em!important;
   font-size-adjust: none;
   font-stretch: normal;
@@ -570,7 +573,7 @@ button.large, a.button.large, input.button.large {
   -webkit-border-radius: .3em;
   -moz-border-radius:    .3em;
   border-radius:         .3em;
-  font-size: 1.4em!important;
+  font-size: 1em !important;
   line-height: 1.4em;
 }
 button.small, a.button.small, input.button.small {
@@ -609,6 +612,8 @@ p button img {  margin: 0 5px 0 0 }
   font-size: 16px;
   font-weight: 700;
 }
+
+/* === PRODUCTOS */
 #product-details .price.selling {  font-size: 1.5em }
 .price.diff {
   color: #666;
@@ -631,9 +636,9 @@ ul.product-listing li.product {
   -webkit-border-radius: 6px;
   -moz-border-radius:    6px;
   border-radius:         6px;
-  -webkit-box-shadow: 0 1px 6px #c6c6c6;
-  -moz-box-shadow:    0 1px 6px #c6c6c6;
-  box-shadow:         0 1px 6px #c6c6c6;
+  -webkit-box-shadow: 0 1px 3px #c6c6c6;
+  -moz-box-shadow:    0 1px 3px #c6c6c6;
+  box-shadow:         0 1px 3px #c6c6c6;
   -webkit-transition: all 200ms ease-out;
   -moz-transition:    all 200ms ease-out;
   -o-transition:      all 200ms ease-out;
@@ -643,14 +648,18 @@ ul.product-listing li.product {
   padding: 0;
   text-align: center;
   width: 220px;
+  border: 1px solid #ddd;
 }
 ul.product-listing li.product:hover {
-  -webkit-box-shadow: 0 2px 9px #7a7a7a;
-  -moz-box-shadow:    0 2px 9px #7a7a7a;
-  box-shadow:         0 2px 9px #7a7a7a;
+-webkit-box-shadow: 0 3px 5px #bbb;
+-moz-box-shadow:    0 3px 5px #bbb;
+box-shadow:         0 3px 5px #bbb;
   background: #F8F8F8;
 }
-ul.product-listing li.product:hover .product-name a, ul.product-listing li.product:hover .product-price a {  background: #FAFCC3 }
+ul.product-listing li.product .product-name a, ul.product-listing li.product .product-price a {  
+  -webkit-transition: background .2s ease-out;
+  transition:         background .2s ease-out;
+}
 ul.product-listing li.product a.image-link-container {
   -webkit-border-radius: 3px;
   -moz-border-radius:    3px;
@@ -686,11 +695,13 @@ ul.product-listing li.product .product-price {
 ul.product-listing li.product .product-name a {
   display: block;
   font-weight: 700;
+  font: 100 1.3em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
 }
 ul.product-listing li.product .product-price a {
   color: #1B719B;
   display: block;
-  font-size: 15px;
+  font-size: 30px;
+  font-weight: 100;
 }
 ul.product-listing li.product a.info span {  display: block }
 ul.product-listing li.productli:hover {  border-color: #FFD700 }
@@ -780,12 +791,13 @@ ul.thumbnails li.selected {  border-color: #999 }
   position: absolute;
 }
 #product-description {
-  border-right: 1px solid #eee;
   display: inline;
   float: left;
   margin-right: 25px;
   padding-right: 24px;
   width: 310px;
+  font-weight: 100;
+  font-size: 1.2em;
 }
 #cart-form {
   display: inline;
@@ -866,6 +878,8 @@ input.openid_url {
   font-size: 1.5em;
   padding-left: 18px;
 }
+
+/* === SEARCH BAR */
 #search_bar {
   float: right;
   margin-right: 25px;
@@ -945,7 +959,7 @@ h2#head_logo span {  display: none }
   background-color: #026362;
   color: #FFF;
   display: block;
-  font-family: Lucida Grande,Helvetica,Arial;
+  font-family: 'Roboto', Arial, 'Helvetica', sans-serif;
   font-size: 12px;
   margin: 3px 1px;
   padding: 3px 8px;
