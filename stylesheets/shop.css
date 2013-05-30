@@ -644,7 +644,7 @@ ul.product-listing li.product {
   margin: 0 18px 25px 0;
   padding: 0;
   text-align: center;
-  width: 220px;
+  width: 210px;
   border: 1px solid #ddd;
 }
 ul.product-listing li.product:hover {
@@ -673,7 +673,7 @@ ul.product-listing li.product a.image-link-container img {
   border-radius:         3px;
   display: block;
   margin: 15px;
-  width: 192px;
+  width: 181px;
 }
 ul.product-listing li.product a {
   color: #111;
