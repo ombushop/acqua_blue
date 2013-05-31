@@ -1,7 +1,13 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/*******************************************************************************
+OmbuShop - Github theme page
+*******************************************************************************/
+
+@import url(pygment_trac.css);
+
+/*******************************************************************************
+MeyerWeb Reset
+*******************************************************************************/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,469 +17,273 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* LAYOUT STYLES */
-body {
-  font-size: 15px;
-  line-height: 1.5; 
-  background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-  font-weight: 400;
-  color: #666;
-}
-
-a {
-  color: #2879d0;
-}
-a:hover {
-  color: #2268b2;
-}
-
-header {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
-}
-
-header h1 {
-  letter-spacing: -1px;
-  font-size: 72px;
-  color: #fff;
-  line-height: 1;
-  margin-bottom: 0.2em;
-  width: 540px;
-}
-
-header h2 {
-  font-size: 26px;
-  color: #9ddcff;
-  font-weight: normal;
-  line-height: 1.3;
-  width: 540px;
-  letter-spacing: 0;
-}
-
-.inner {
-  position: relative;
-  width: 940px;
-  margin: 0 auto;
-}
-
-#content-wrapper {
-  border-top: solid 1px #fff;
-  padding-top: 30px;
-}
-
-#main-content {
-  width: 690px;
-  float: left;
-}
-
-#main-content img {
-  max-width: 100%;
-}
-
-aside#sidebar {
-  width: 200px;
-  padding-left: 20px;
-  min-height: 504px;
-  float: right;
-  background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
-  font-size: 12px;
-  line-height: 1.3;
-}
-
-aside#sidebar p.repo-owner,
-aside#sidebar p.repo-owner a {
-  font-weight: bold;
-}
-
-#downloads {
-  margin-bottom: 40px;
-}
-
-a.button {
-  width: 134px;
-  height: 58px;
-  line-height: 1.2;
-  font-size: 23px;
-  color: #fff;
-  padding-left: 68px;
-  padding-top: 22px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-}
-a.button small {
-  display: block;
-  font-size: 11px;
-}
-header a.button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
-}
-aside a.button {
-  width: 138px;
-  padding-left: 64px;
-  display: block;
-  background: transparent url(../images/download-button.png) 0 0 no-repeat;
-  margin-bottom: 20px;
-  font-size: 21px;
-}
-
-code, pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #222;
-  margin-bottom: 30px;
-  font-size: 13px;
-}
-
-code {
-  background-color: #f2f8fc;
-  border: solid 1px #dbe7f3;
-  padding: 0 3px;
-}
-
-pre {
-  padding: 20px;
-  background: #fff;
-  text-shadow: none;
-  overflow: auto;
-  border: solid 1px #f2f2f2;
-}
-pre code {
-  color: #2879d0;
-  background-color: #fff;
-  border: none;
+  margin: 0;
   padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-ul, ol, dl {
-  margin-bottom: 20px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
+ol, ul {
+  list-style: none;
+}
 
-/* COMMON STYLES */
-
-hr {
-  height: 1px;
-  line-height: 1px;
-  margin-top: 1em;
-  padding-bottom: 1em;
-  border: none;
-  background: transparent url('../images/hr.png') 0 0 no-repeat;
+blockquote, q {
 }
 
 table {
-  width: 100%;
-  border: 1px solid #ebebeb;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-th {
-  font-weight: 500;
+a:focus {
+  outline: none;
 }
 
-td {
-  border: 1px solid #ebebeb;
-  text-align: center; 
+/*******************************************************************************
+Theme Styles
+*******************************************************************************/
+
+body {
+  box-sizing: border-box;
+  color: #444;
+  background: #E0EFEC;
+  font-size: 16px;
+  font-family: "Lato", "Georgia", "Lucida Sans", Verdana, Arial, sans-serif;
   font-weight: 300;
+  line-height: 1.5;
 }
-
-form {
-  background: #f2f2f2;
-  padding: 20px;
-  
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-weight: 700;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
-
-
-/* GENERAL ELEMENT TYPE STYLES */
-
-#main-content h1 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 2.8em;
-  letter-spacing: -1px;
-  color: #474747;
-} 
-
-#main-content h1:before {
-  content: "/";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -0.9em;
+h3 {
+  font-size: 1.2em;
+  margin-top: 1.3em;
 }
-
-#main-content h2 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #474747;
-} 
-#main-content h2:before {
-  content: "//";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -1.5em;
+img {
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
-
-#main-content h3 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: #474747;
-} 
- 
-#main-content h3:before {
-  content: "///";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -2em;
-}
-
-#main-content h4 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 15px;
-  font-weight: bold;
-  color: #474747;
-} 
-
-h4:before {
-  content: "////";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -2.8em;
-}
-
-#main-content h5 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 14px;
-  color: #474747;
-} 
-h5:before {
-  content: "/////";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -3.2em;
-}
-
-#main-content h6 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: .8em;
-  color: #474747;
-} 
-h6:before {
-  content: "//////";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -3.7em;
-}
-
-p {
-  margin-bottom: 20px;
-}
- 
 a {
+  color: #FF8C2F;
   text-decoration: none;
 }
-
-p a {
-  font-weight: 400;
+a:hover {
+  text-decoration: underline;
+}
+p {
+  font-size: 1.05em;
 }
 
-blockquote {
-  font-size: 1.6em;
-  border-left: 10px solid #e9e9e9;
-  margin-bottom: 20px;
-  padding: 0 0 0 30px;
-}
+/* ================================== */
+/* HEADER */
 
-ul li {
-  list-style: disc inside;
+#header_wrap {
+  background: #4A382F;
+  box-shadow: rgba(0,0,0,.4) 0 3px 18px inset,
+              rgba(0,0,0,.3) 0 3px 4px;
+  height: 70px;
+  padding-right: 20px;
   padding-left: 20px;
 }
-
-ol li {
-  list-style: decimal inside;
-  padding-left: 3px;
+header {
+  padding-top: 1px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
 }
-
-dl dd {
-  font-style: italic;
-  font-weight: 100;
-}
-
-footer {
-  background: transparent url('../images/hr.png') 0 0 no-repeat;
-  margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  font-size: 13px;
-  color: #aaa;
-}
-
-footer a {
-  color: #666;
-}
-footer a:hover {
-  color: #444;
-}
-
-/* MISC */
-.clearfix:after {
-  clear: both;
-  content: '.';
+#ombushop_logo {
+  background: url('../images/ombushop-logo.png') no-repeat top left;
+  width: 155px;
+  height: 41px;
+  text-indent: -20000px;
   display: block;
-  visibility: hidden;
-  height: 0;
+  margin-top: 13px;
+}
+#forkme_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: 10;
+  padding: 10px 50px 10px 10px;
+  color: #fff;
+  background: url('../images/blacktocat.png') #2BA47D no-repeat 95% 50%;
+  font-size: .8em;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  text-decoration: none;
+  -webkit-transition: 200ms padding;
+  -moz-transition: 200ms padding;
+  -ms-transition: 200ms padding;
+  -o-transition: 200ms padding;
+  transition: 200ms padding;
+}
+#forkme_banner:hover {
+  padding-top: 20px;
+}
+a.download_link {
+  font-weight: 400;
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 20px;
+  background: #FF8C2F;
+  color: #fff;
+  border-radius: 3px;
+}
+a.download_link:hover {
+  text-decoration: none;
+  box-shadow: rgba(255,255,255,.3) 0 3px 3px inset,
+              rgba(0,0,0,.3) 0 -3px 3px inset;
+  background: #ff8f00;
+}
+a.download_link:active {
+  text-decoration: none;
+  box-shadow: rgba(255,255,255,.3) 0 -3px 3px inset,
+              rgba(0,0,0,.3) 0 3px 3px inset;
+  background: #d3660f;
 }
 
-.clearfix {display: inline-block;}
-* html .clearfix {height: 1%;}
-.clearfix {display: block;}
+/* ================================== */
+/* MAIN CONTENT */
 
-/* #Media Queries
-================================================== */
+#main_content {
+  background: #fff;
+  max-width: 660px;
+  padding: 20px 20px 40px 20px;
+}
+#main_content header {
+  background: #ffffdf;
+  margin: -20px -20px 2em -20px;
+  padding: 20px 20px 30px 20px;
+  border-bottom: #f1f1d1 1px solid;
+}
+#downloads {
+  text-align: center;
+}
+#project_title {
+  font-family: "Lato", "Georgia", "Lucida Sans", Verdana, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1;
+  color: #2BA47D;
+  margin-bottom: 0;
+  text-align: center;
+}
+#project_tagline {
+  font-family: "Lato", "Georgia", "Lucida Sans", Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: .9em;
+  color: #4a382f;
+  margin-top: .6em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+}
 
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
+/* ================================== */
+/* FOOTER */
 
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .inner {
-    width: 740px;
-  }
-  header h1, header h2 {
-    width: 340px;
-  }
-  header h1 {
-    font-size: 60px;
-  }
-  header h2 {
-    font-size: 30px;
-  }
-  #main-content {
-    width: 490px;
-  }
-  #main-content h1:before,
-  #main-content h2:before,
-  #main-content h3:before,
-  #main-content h4:before,
-  #main-content h5:before,
-  #main-content h6:before {
-    content: none;
-    padding-right: 0;
-    margin-left: 0;
+#footer_wrap {
+  background: #4A382F;
+  color: #fff;
+  padding: 20px 0;
+  border-top: #41312a 4px solid;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+footer {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ================================== */
+/* CODE */
+
+pre, code {
+  width: 100%;
+  color: #222;
+  background-color: #fff;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 14px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+pre {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  overflow: auto;
+}
+code {
+  padding: 3px;
+  margin: 0 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+pre code {
+  display: block;
+  box-shadow: none;
+}
+
+
+/* ================================== */
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
   }
 }
 
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
-  .inner {
-    width: 93%;
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 1.05em;
   }
-  header {
-    padding: 20px 0;
+  #header_wrap {
+    height: 100px;
   }
-  header .inner {
-    position: relative;
+  #main_content {
+    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+    margin: -30px auto 20px;
+    border-radius: 5px;
+    overflow: hidden;
   }
-  header h1, header h2 {
-    width: 100%;
+  #main_content_wrap {
+    padding-right: 20px;
+    padding-left: 20px;
   }
-  header h1 {
-    font-size: 48px;
+  #project_title {
+    font-size: 2.7em;
   }
-  header h2 {
-    font-size: 24px;
-  }
-  header a.button {
-    background-image: none;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    margin-top: 15px;
-    padding: 5px 10px;
-    position: relative;
-    text-align: center;
-    font-size: 13px;
-    line-height: 1;
-    background-color: #9ddcff;
-    color: #2879d0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;                     
-    border-radius: 5px;    
-  }
-  header a.button small {
-    font-size: 13px;
-    display: inline;
-  }
-  #main-content,
-  aside#sidebar {
-    float: none;
-    width: 100% ! important;
-  }
-  aside#sidebar {
-    background-image: none;
-    margin-top: 20px;
-    border-top: solid 1px #ddd;
-    padding: 20px 0;
-    min-height: 0;
-  }
-  aside#sidebar a.button {
-    display: none;
-  }
-  #main-content h1:before,
-  #main-content h2:before,
-  #main-content h3:before,
-  #main-content h4:before,
-  #main-content h5:before,
-  #main-content h6:before {
-    content: none;
-    padding-right: 0;
-    margin-left: 0;
+  #project_tagline {
+    font-size: .8em;
   }
 }
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
+@media screen and (min-width: 926px) {
+  #project_title {
+    font-size: 3.2em;
+  }
+  #project_tagline {
+    font-size: 1.2em;
+  }
+}
