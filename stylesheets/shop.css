@@ -106,7 +106,7 @@ h1 {
   font: 100 4em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
 }
 body#product-details h1 {
-  border-top: 2px solid #787878;
+  border-top: 2px solid #eee;
   border-bottom: 1px dashed #6c6c6c;
   padding-top: 30px;
   margin-bottom: .5em;
@@ -303,7 +303,7 @@ body.one-col #content {
   width: 930px;
 }
 body.two-col #content {
-  border-top: 2px solid #787878;
+  border-top: 2px solid #eee;
   display: block;
   float: left;
   margin: 0 0 0 20px;
@@ -413,7 +413,10 @@ ul.navigation-list {
 
 /* === BREADCRUMBS */
 ul.navigation-list li ul {  margin-left: 0 }
-.breadcrumbs {  margin-bottom: 1em }
+.breadcrumbs { 
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
 .breadcrumbs ul {
   display: inline;
   list-style-type: none;
@@ -469,36 +472,39 @@ ul#nav-bar li {
   float: left;
   margin-left: 1em;
 }
-.pagination a.page {
-  border: 1px solid #9aafe5;
+.pagination a {
   color: #1b719b;
   margin: 0 3px;
-  padding: 0 5px;
+  padding: 3px 8px;
   text-decoration: none;
+  background: #f1f1f1;
+  border-radius: 3px;
+  -webkit-transition: 200ms all;
+  -moz-transition:    200ms all;
+  -ms-transition:     200ms all;
+  -o-transition:      200ms all;
+  transition:         200ms all;
 }
-.pagination span.page {
+.pagination span {
   margin: 0 3px;
   padding: 0 5px;
 }
-.pagination a.page:hover {
-  border: 1px solid #2b66a5;
+.pagination a:hover {
   color: #000;
 }
-.pagination a.page:active {
-  border: 1px solid #2b66a5;
+.pagination a:active {
   color: #000;
 }
 .pagination a.next_page {  font-weight: 700 }
 .pagination span.disabled_page {
-  border: 1px solid #929292;
   color: #929292;
 }
-.pagination span.current_page {
+.pagination span.current {
   background-color: #1b719b;
-  border: 1px solid;
-  border-color: #162f54;
   color: #fff;
   font-weight: 700;
+  border-radius: 3px;
+  padding: 3px 8px;
 }
 .formError {
   -webkit-border-radius: 5px;
@@ -623,10 +629,12 @@ ul.product-listing {
   padding: 0;
 }
 h3.search-results-title {
-  border-bottom: 1px solid #e3e3e3;
   color: #888;
   margin-top: 29px;
-  padding-bottom: 9px;
+  font-size: 16px;
+  background: #f1f1f1;
+  padding: 9px 14px;
+  border-radius: 3px;
 }
 span.search-results-keywords {  color: #1b719b }
 ul.product-listing li.product {
@@ -879,7 +887,7 @@ input.openid_url {
 /* === SEARCH BAR */
 #search_bar {
   float: right;
-  margin-right: 25px;
+  margin-right: 15px;
   margin-top: 4px;
   min-width: 320px;
   text-align: right;
@@ -948,18 +956,28 @@ h2#head_logo span {  display: none }
 .cart-indicator {
   color: #1b719b;
   font-size: 12px;
-  margin-right: 10px;
-  margin-top: 3px;
-  padding-top: 4px;
+  margin-right: 0;
+  margin-top: 4px;
 }
 .cart-indicator a {
   color: #1b719b;
   text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 5px 10px;
+  letter-spacing: .1em;
+  -webkit-transition: 200ms all;
+  -moz-transition:    200ms all;
+  -ms-transition:     200ms all;
+  -o-transition:      200ms all;
+  transition:         200ms all;
 }
 #header .cart-indicator a:hover {
   background-color: transparent;
   color: #1b719b;
-  text-decoration: underline;
+  text-decoration: none;
+  background: #eee;
 }
 .top-bar {
   background-color: #333;
@@ -1001,7 +1019,7 @@ h2#head_logo span {  display: none }
 }
 #login-bar a {  text-decoration: none }
 #sidebar {
-  border-top: 2px solid #787878;
+  border-top: 2px solid #eee;
   float: left;
   padding-top: 7px;
   width: 210px;
