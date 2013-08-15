@@ -22,9 +22,9 @@
 							<div>
 	              {% assign image = product.featured_image %}
 	              {% if image == nil %}
-	                <a href="/products/{{ product.to_param }}" class="image-link-container"><img alt="No image" src="/images/noimage/product.jpg"></img></a>                    
+	                <a href="/products/{{ product.to_param }}" class="image-link-container"><img alt="No image" src="/images/noimage/product.jpg" /></a>                    
 	              {% else %}
-	                <a href="/products/{{ product.to_param }}" class="image-link-container"><img alt="{{ image.alt }}" src="{{ image.src }}"></img></a>          
+	                <a href="/products/{{ product.to_param }}" class="image-link-container"><img alt="{{ image.alt }}" src="{{ image.src }}" /></a>          
 	              {% endif %}
 
 	              <h4 class="product-name"><a href="/products/{{ product.to_param }}">{{ product.name }}</a></h4>

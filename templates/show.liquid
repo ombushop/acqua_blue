@@ -5,7 +5,7 @@
 
     <div id="main-image">
       {% if product.featured_image %}
-        <!-- <img src="{{ product.featured_image | image_size: 'vertical_small' }}" title="{{ product.featured_image.alt | capitalize }}"></img> -->
+        <!-- <img src="{{ product.featured_image | image_size: 'vertical_small' }}" title="{{ product.featured_image.alt | capitalize }}" /> -->
 
         <div id="wrap" style="top:0px;z-index:9999;position:relative;">
           <a href="{{ product.featured_image | image_size: 'original' }}" class="cloud-zoom" id="zoom1" rel="adjustX:30, adjustY:0, softFocus:false, position:'right', showTitle:false" style="position: relative; display: block; ">
@@ -16,7 +16,7 @@
         </div>
 
       {% else %}
-        <img alt="No image" src="/images/noimage/product.jpg"></img>
+        <img alt="No image" src="/images/noimage/product.jpg" />
       {% endif %}
     </div>
 
@@ -102,7 +102,7 @@
         <span>En hasta 18 cuotas con:</span>
 				<div class="first_tier">
 				  {% assign gateway = shop.payment_gateways.first %}
-				  <img src="{{ gateway.payment_options_image }}">
+				  <img src="{{ gateway.payment_options_image }}" />
 				</div>
       </div> <!-- end .payment_images -->
 
