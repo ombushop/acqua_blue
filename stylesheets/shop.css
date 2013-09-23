@@ -472,6 +472,8 @@ ul#nav-bar li {
   float: left;
   margin-left: 1em;
 }
+
+/* === Pagination */
 .pagination a {
   color: #1b719b;
   margin: 0 3px;
@@ -506,6 +508,8 @@ ul#nav-bar li {
   border-radius: 3px;
   padding: 3px 8px;
 }
+/* End Pagination */
+
 .formError {
   -webkit-border-radius: 5px;
   -moz-border-radius:    5px;
