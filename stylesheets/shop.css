@@ -108,10 +108,10 @@ h1 {
 body#product-details h1 {
   border-top: 2px solid #eee;
   border-bottom: 1px dashed #6c6c6c;
-  padding-top: 30px;
-  margin-bottom: .5em;
+  padding-top: 50px;
+  margin-bottom: 1em;
   padding-bottom: 9px;
-  font: 100 4em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
+  font: 100 3em/1 'Roboto Slab', Arial, 'Helvetica', sans-serif;
 }
 h1 img {  margin: 0 }
 h2 {
@@ -304,10 +304,12 @@ body.one-col #content {
 }
 body.two-col #content {
   border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
   display: block;
   float: left;
   margin: 0 0 0 20px;
   width: 700px;
+  padding-bottom: 30px;
 }
 body #content.no-left-col {
   display: block;
@@ -319,6 +321,7 @@ body #content.no-left-col {
 }
 body #content.no-left-col.page {
   padding-right: 70px;
+  border-bottom: 2px solid #eee;
 }
 
 /* === HEADER */
@@ -474,6 +477,9 @@ ul#nav-bar li {
 }
 
 /* === Pagination */
+.pagination {
+  text-align: center;
+}
 .pagination a {
   color: #1b719b;
   margin: 0 3px;
@@ -612,7 +618,10 @@ button::-moz-focus-inner {
 }
 p a.button img {  margin: 0 5px 0 0 }
 p button img {  margin: 0 5px 0 0 }
-.prices {  font-weight: 700 }
+.prices {  
+  font-weight: 700;
+  margin-bottom: 1em;
+}
 .prices #product-details .prices {  font-size: 1.25em }
 .price.selling {
   color: #1b719b;
@@ -773,7 +782,9 @@ ul.thumbnails li img {
 }
 ul.thumbnails li:hover {  border-color: #ccc }
 ul.thumbnails li.selected {  border-color: #999 }
-#product-variants {  margin-bottom: 1em }
+#product-variants {  
+  margin-bottom: 1.5em;
+}
 #product-variants ul {
   list-style: none;
   margin: 0;
@@ -811,7 +822,10 @@ ul.thumbnails li.selected {  border-color: #999 }
 #cart-form {
   display: inline;
   float: left;
-  width: 270px;
+  width: 250px;
+  padding-top: 20px;
+  background: #F7F7F7;
+  padding: 20px;
 }
 #taxon-crumbs {
   clear: left;
