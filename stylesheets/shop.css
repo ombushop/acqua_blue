@@ -1,4 +1,4 @@
-/* 
+/*
 **************************************
 OmbuShop - Tu Tienda Online
 **************************************
@@ -416,7 +416,7 @@ ul.navigation-list {
 
 /* === BREADCRUMBS */
 ul.navigation-list li ul {  margin-left: 0 }
-.breadcrumbs { 
+.breadcrumbs {
   margin-bottom: .5em;
   margin-top: .5em;
 }
@@ -618,7 +618,7 @@ button::-moz-focus-inner {
 }
 p a.button img {  margin: 0 5px 0 0 }
 p button img {  margin: 0 5px 0 0 }
-.prices {  
+.prices {
   font-weight: 700;
   margin-bottom: 1em;
 }
@@ -674,7 +674,7 @@ ul.product-listing li.product:hover {
 box-shadow:         0 3px 5px #bbb;
   background: #F8F8F8;
 }
-ul.product-listing li.product .product-name a, ul.product-listing li.product .product-price a {  
+ul.product-listing li.product .product-name a, ul.product-listing li.product .product-price a {
   -webkit-transition: background .2s ease-out;
   transition:         background .2s ease-out;
 }
@@ -752,8 +752,9 @@ ul.product-listing li.productli:hover a.info {  background-color: #fafcc3 }
 #content.index div.social-container a.pin-it-button, #content.index div.social-container a {
   display: block;
   float: right;
-  margin-right: -20px;
+  margin-right: 55px;
   width: 107px;
+  top: 2px;
 }
 div.in-product-social-container {  margin: 20px 0 }
 ul.thumbnails {
@@ -782,7 +783,7 @@ ul.thumbnails li img {
 }
 ul.thumbnails li:hover {  border-color: #ccc }
 ul.thumbnails li.selected {  border-color: #999 }
-#product-variants {  
+#product-variants {
   margin-bottom: 1.5em;
 }
 #product-variants ul {
