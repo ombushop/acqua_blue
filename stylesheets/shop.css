@@ -304,7 +304,6 @@ body.one-col #content {
 }
 body.two-col #content {
   border-top: 2px solid #eee;
-  border-bottom: 2px solid #eee;
   display: block;
   float: left;
   margin: 0 0 0 20px;
@@ -321,7 +320,6 @@ body #content.no-left-col {
 }
 body #content.no-left-col.page {
   padding-right: 70px;
-  border-bottom: 2px solid #eee;
 }
 
 /* === HEADER */
@@ -907,7 +905,6 @@ input.openid_url {
 #search_bar {
   float: right;
   margin-right: 15px;
-  margin-top: 4px;
   min-width: 320px;
   text-align: right;
 }
@@ -976,7 +973,6 @@ h2#head_logo span {  display: none }
   color: #1b719b;
   font-size: 12px;
   margin-right: 0;
-  margin-top: 4px;
 }
 .cart-indicator a {
   color: #1b719b;
@@ -1037,11 +1033,98 @@ h2#head_logo span {  display: none }
   text-shadow: 0 -1px 0 #0DC27B;
 }
 #login-bar a {  text-decoration: none }
+#contact-info{
+  position: absolute;
+  right: 360px;
+}
+#contact-info ul li{
+  float: left;
+  text-align: left;
+  padding: 0 3px;
+}
+#contact-info ul li a{
+  color:#000;
+  background: none !important;
+}
+#contact-info ul li a i{
+  width: 20px;
+  background-color: #1B719B;
+  padding: 4px 2px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 15px;
+  color: #F8F8F2;
+}
+#contact-info ul li a:hover i{
+  background-color: #000000;
+}
+#contact-info ul li.phone{
+  margin-left: 10px;
+  color: #1B719B;
+}
+#contact-info ul li.phone i{
+  margin-right: 5px;
+}
 #sidebar {
   border-top: 2px solid #eee;
   float: left;
   padding-top: 7px;
   width: 210px;
+}
+#footer{
+  border-top: 1px solid #1B719B;
+  clear: both;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.store_footer, #footer-nav, #follow-us {
+  width: 280px;
+  float: left;
+  color:#000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.store_footer{
+  padding-left: 20px;
+}
+.store_footer #contact-info ul li.phone{
+  margin-left: 0;
+  float: none;
+  text-align: left;
+  padding-bottom: 5px;
+}
+#footer #contact-info{
+ position: inherit;
+}
+#footer-nav{
+  margin-left: 20px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-right: 1px solid #1B719B;
+  border-left: 1px solid #1B719B;
+  min-height: 120px;
+}
+#footer-nav ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+#footer-nav ul li a:hover{
+  color: #1B719B;
+}
+#footer h1{
+  font-size: 15px !important;
+  padding-top: 0px !important;
+  border: 0 !important;
+}
+a.ombu-tagline{
+  display: block;
+  clear: both;
+  border-top: 1px solid #1B719B;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 11px;
 }
 #ombu-footer {  display: none!important }
 ul#navigation_bar {

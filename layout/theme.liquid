@@ -27,11 +27,13 @@
     <link href='https://secure.ombushop.com/assets/shops/default.css' rel='stylesheet' type='text/css' />
 
 		<!-- Ombu Shop - Theme: Acqua Blue -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link href='/themes/acqua_blue/stylesheets/reset.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/basic.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/buttons.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/advice.css' rel='stylesheet' type='text/css' />
+    <link href='/themes/acqua_blue/stylesheets/contact.css' rel='stylesheet' type='text/css' />
 
     {{ 'shop.css' | asset_url | stylesheet_tag }}
     {{ 'products.css' | asset_url | stylesheet_tag }}
@@ -138,7 +140,17 @@
         <div id="header" class="container_bg">
 
           {% include 'logo' %}
-
+          <div id="contact-info">
+            <ul>
+              <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
+              <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
+            </ul>
+          </div>
           <ul id="cart_bar">
             <li class="cart-indicator">
               {% if current_order.item_count == 0 %}
@@ -177,9 +189,43 @@
 
           {{ content_for_layout }}
 
-          {{ content_for_footer }}
-          <div class="store_footer">
-            {{ shop.footer }}
+          <div id="footer">
+            <div class="footer-container">
+              <div class="store_footer">
+                <div id="contact-info">
+                  <h1>Contactanos</h1>
+                  <ul>
+                    <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
+                  </ul>
+                </div>
+                <p>{{ shop.footer }}</p>
+              </div>
+            <div id="footer-nav">
+              <h1>Navegación</h1>
+              <ul class="links">
+                {% if shop.homepage %}
+                <li><a href="/products">Productos</a></li>
+                {% endif %}
+                {% for page in pages %}
+                <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div id="follow-us">
+                <h1>Seguinos</h1>
+                <div id="contact-info">
+                  <ul>
+                    <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                    <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
+                    <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+            <a href="#" class="ombu-tagline" title="Crea tu tienda OmbuShop en minutos" target="_blank">Crea tu tienda <strong>OmbuShop</strong> en minutos!</a>
           </div>
         </div><!-- end "wrapper" -->
       </div><!-- end "page" -->
