@@ -586,6 +586,12 @@ button.large, a.button.large, input.button.large {
   border-radius:         .3em;
   font-size: 1em !important;
   line-height: 1.4em;
+  background: none;
+  background-color: #1B719B;
+  border: 0;
+  text-shadow: none;
+  color: #fff;
+  font-weight: normal;
 }
 button.small, a.button.small, input.button.small {
   -webkit-border-radius: 4px;
@@ -726,6 +732,18 @@ ul.product-listing li.product a.info {
   -moz-transition:    all 200ms ease-out;
   -o-transition:      all 200ms ease-out;
   transition:         all 200ms ease-out;
+}
+.payment_images {
+  border-top: 1px solid #000;
+  padding-top: 10px;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.payment_images span{
+  color: #000;
 }
 
 /* === REDES SOCIALES */
