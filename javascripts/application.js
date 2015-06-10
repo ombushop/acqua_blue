@@ -41,9 +41,10 @@ function checkSelected() {
   }
 }
 
+
 function changePrice(price){
   if(price != undefined && price != "") {
-    $("span.price").html(price);
+    $("span.price").html("$"+Math.floor(price));
   }
 }
 
