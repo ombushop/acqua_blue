@@ -513,7 +513,6 @@ footer {
   max-width:960px;
   margin:auto;
   overflow: hidden;
-  padding: 0 2%;
 }
 .footer-container nav{
   max-width: 33%;
@@ -905,7 +904,7 @@ button.buy-button:active {
     font-size: 1em;
     padding: .3em;
     color: #1c1e1d;
-    border-top: 1px solid #406DE4;
+    border-bottom: 1px solid #406DE4;
   }
   #taxonomies {
     position: static;
