@@ -58,7 +58,8 @@ File: index.liquid
       </ul>
     {% else %}
     <div class="no-products">
-      No se encontraron productos.
+      <h3 class="search-results-title">No se encontraron productos.</h3>
+      {% include 'sidebar' %}
     </div>
     {% endif %}
 
