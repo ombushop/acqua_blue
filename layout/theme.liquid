@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
 
     {% capture meta_title %}
@@ -23,15 +22,26 @@
     <meta charset="utf-8" />
     <title>{{ meta_title | strip_newlines | strip_html }}</title>
 
+    <!--[if lt IE 9]>
+      <script src="http://www.ombushop.com/assets/themes/acqua_blue/javascripts/html5shiv.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
     <!-- Ombu Shop - Default CSS -->
     <link href='https://secure.ombushop.com/assets/shops/default.css' rel='stylesheet' type='text/css' />
 
 		<!-- Ombu Shop - Theme: Acqua Blue -->
 
+    <!-- Google typography and Fontawesome -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <link href='/themes/acqua_blue/stylesheets/reset.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/basic.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/buttons.css' rel='stylesheet' type='text/css' />
     <link href='/themes/acqua_blue/stylesheets/advice.css' rel='stylesheet' type='text/css' />
+    <link href='/themes/acqua_blue/stylesheets/contact.css' rel='stylesheet' type='text/css' />
 
     {{ 'shop.css' | asset_url | stylesheet_tag }}
     {{ 'products.css' | asset_url | stylesheet_tag }}
@@ -47,25 +57,47 @@
     <script src='/themes/acqua_blue/javascripts/cloud-zoom.1.0.2.min.js' type='text/javascript'></script>
 
     <!-- jQuery Masonry -->
-    <script src='/themes/acqua_blue/javascripts/jquery.masonry.min.js' type='text/javascript'></script>
+    <script src='/themes/acqua_blue/javascripts/masonry.pkgd.min.js' type='text/javascript'></script>
     <script src='/themes/acqua_blue/javascripts/jquery.imagesloaded.min.js' type='text/javascript'></script>
 
     <script src='/themes/acqua_blue/javascripts/product.min.js' type='text/javascript'></script>
 
     {{ content_for_header }}
 
-		<script type="text/javascript">
-			jQuery(document).ready(function(){
-				var $container = $('.product-listing');
-				$container.imagesLoaded(function(){
-				  $container.masonry({
-						isAnimated: false,
-						isResizable: false,
-				    itemSelector: '.product'
-				  });
-				});
-			});
-		</script>
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        // masonry
+        var $container = $('.product-listing');
+        $container.imagesLoaded(function(){
+
+          $container.masonry({
+            isAnimated: true,
+            isResizable: true,
+            isFitWidth: true,
+            columnWidth: 250,
+            gutter: 15,
+            itemSelector: '.product'
+          });
+
+        });
+        // categories menu
+        $('#taxonomies ul.navigation-list > li > ul').show();
+        var categories_opened = true;
+        $('#taxonomies > ul.navigation-list > li > h5').click(function(e){
+          if(categories_opened == true){
+            // close categories
+            $('#taxonomies ul.navigation-list > li > ul').slideUp(300);
+            $('#taxonomies > ul.navigation-list').removeClass("opened");
+            categories_opened = false;
+          } else {
+            // open categories
+            categories_opened = true;
+            $('#taxonomies > ul.navigation-list').addClass("opened");
+            $('#taxonomies ul.navigation-list > li > ul').slideDown(300);
+          }
+        });
+      });
+    </script>
 
     {% if product %}
     <!-- Facebook: inicio de metatags -->
@@ -99,18 +131,20 @@
 
   </head>
 
-  <body class="{% if template == 'show' %} one-col {% else %} two-col {% endif %}" {% if template == 'show' %} id="product-details" {% endif %}>
+  <body class="theme-aqua-blue{% if template == 'show' %} template-show{% endif %}{% if template == 'index' %} template-index{% endif %}{% if template == 'page' %} template-page{% endif %}" {% if template == 'show' %} id="product-details" {% endif %}>
+
+    <!-- facebook code -->
     <div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end facebook code -->
 
-		<div id="all">
-
+      <!-- admin bar -->
       {% if current_user %}
         {% if current_user.is_admin? %}
         <div id="admin-bar" class="top-bar">
@@ -131,59 +165,104 @@
           {% endunless %}
         {% endif %}
       {% endif %}
+      <!-- end admin bar -->
 
       {% include 'flash' %}
 
-      <div id="page">
-        <div id="header" class="container_bg">
+      <div id="page-container">
 
+        <header>
+          <div id="header-content">
           {% include 'logo' %}
-
-          <ul id="cart_bar">
-            <li class="cart-indicator">
+          <div id="search_bar">
+            <form accept-charset="UTF-8" action="/products" method="get">
+              <div style="margin:0;padding:0;display:inline">
+                <input name="utf8" type="hidden" value="✓" />
+              </div>
+              <label for="keywords">Buscar</label>
+              <input id="keywords" name="keywords" type="text" value="{{ keywords }}" />
+              <input type="submit" value="Buscar" id="search-button" />
+            </form>
+          </div>
+          <div id="contact-info">
+            <ul>
+              <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+              <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li class="google-plus" title="Google Plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+              <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li class="phone"><i class="fa fa-phone"></i> 678-678-6789</li>
+            </ul>
+          </div>
+          <div id="cart-bar">
+            <p class="cart-indicator">
               {% if current_order.item_count == 0 %}
                 <a href="/cart" class="empty" title="Cart">Carrito: (Vacío)</a>
               {% else %}
                 <a href="/cart" class="full" title="Cart">Carrito: {{ current_order.item_count }}</a>
               {% endif %}
-            </li>
-          </ul>
-          <div id="search_bar">
-            <form accept-charset="UTF-8"
-                  action="/products" method="get">
-                <div style="margin:0;padding:0;display:inline">
-                  <input name="utf8" type="hidden" value="✓">
-                </div>
-                <label for="keywords">Buscar:</label>
-                <input id="keywords" name="keywords" type="text" value="{{ keywords }}">
-                <input type="submit" class="search-button" value="Buscar">
-            </form>
-          </div>
+            </p>
+          </div><!-- end #cart-bar -->
 
-					<!-- page navigation -->
-    			<ul id="navigation_bar">
-						{% if shop.homepage %}
-						<li><a href="/products">Productos</a></li>
-						{% endif %}
-						{% for page in pages %}
-						<li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
-						{% endfor %}
-					</ul>
-					<!-- end page navigation -->
 
-        </div><!-- end "header" -->
+        </div>
+        <div id="sub-header">
+          <nav id="nav-container">
+            <ul id="navigation-bar">
+              {% for page in pages %}
+              <li {% if (page.url contains current_path and current_path != "/") or (current_path == "/" and page.is_homepage) %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+              {% endfor %}
+              <li {% if (current_path == "/products") %}class="current-page"{% endif %}><a href="/products">Productos</a></li>
+            </ul>
+          </nav>
+        </div>
+        </header>
 
-        <div id="wrapper" class="container">
-
-          {{ content_for_layout }}
-
-          {{ content_for_footer }}
+        {{ content_for_layout }}
+        <div class="push"></div>
+      </div> <!-- end #page-container -->
+      <footer>
+        <div class="footer-container">
           <div class="store_footer">
-            {{ shop.footer }}
+          <div id="logo">
+            {% include 'logo' %}
           </div>
-        </div><!-- end "wrapper" -->
-      </div><!-- end "page" -->
-    </div><!-- end "all" -->
+          <p>{{ shop.footer }}</p>
+        </div>
+        <nav>
+          <h1>Navegación</h1>
+          <ul>
+            {% if shop.homepage %}
+              <li><a href="/products">Productos</a></li>
+            {% endif %}
+            {% for page in pages %}
+              <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div id="contact-info">
+          <h1>Contacto</h1>
+          <ul>
+            <li title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+            <li title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li title="Google Plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li class="phone"><i class="fa fa-phone"></i> 678-678-6789</li>
+          </ul>
+        </div>
+      </div>
+      <div id="ombushop-footer">
+        <div class="footer-container">
+          <a href="http://www.ombushop.com/tu-tienda-online?utm_source=shop&utm_medium={{shop.name}}" target="_blank" title="Crea tu tienda Ombushop en minutos" > Crea tu tienda <strong>Ombushop</strong> en minutos.</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- pinterest code -->
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+    <!-- end pinterest code -->
   </body>
 </html>

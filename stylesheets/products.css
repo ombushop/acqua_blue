@@ -1,4 +1,4 @@
-/* 
+/*
 **************************************
 OmbuShop - Tu Tienda Online
 **************************************
@@ -6,4 +6,8 @@ Theme: Acqua Blue
 File: products.css
 **************************************
 */
-
+#product-variants label{
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0;
+}
