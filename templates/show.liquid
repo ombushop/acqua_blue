@@ -46,7 +46,6 @@ File: show.liquid
             <span>{{ selected_variant.options_text }}</span>
           </h4>
           <ul id="variant-thumbnails" class="thumbnails">
-            LENGTH OF PRODUCT VARIANTS {{ product_variants | size }}
             {% for variant in product_variants %}
               {% if variant.available? %}
                 {% for image in variant.images %}
@@ -58,7 +57,7 @@ File: show.liquid
                 {% endfor %}
               {% endif %}
             {% endfor %}
-
+          </ul>
         {% endif %}
 
       {% endif %}
