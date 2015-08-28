@@ -1018,7 +1018,7 @@ body#checkout-body #head_logo a span, body#cart #head_logo a span, body#order-bo
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px;
     height: 40px;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1079,7 +1079,7 @@ ul.dropdown-menu{
   top: 10px;
   left: 0;
   z-index: 1000;
-  display: none;
+  opacity: 0;
   float: left;
   min-width: 160px;
   background-color: #fff;
@@ -1089,6 +1089,8 @@ ul.dropdown-menu{
 ul.dropdown-menu li{
   width:100%;
   text-align: left;
+  display: block;
+  border-bottom: 1px solid #f7f7f7;
 }
 ul.dropdown-menu li a {
   display: block;
@@ -1103,8 +1105,12 @@ ul.dropdown-menu li a:hover{
   background-color: #f7f7f7;
   color: #2ba47d;
 }
-ul#login-nav li button.dropdown-toggle:focus+ul.dropdown-menu{
+ul#login-nav li.menu{
   display: block;
+  overflow: visible;
+}
+ul#login-nav li.menu:focus > ul.dropdown-menu{
+  opacity: 1;
 }
 span.caret{
   display: inline-block;
@@ -1165,7 +1171,6 @@ ul#login-nav .btn-inverse.active{
 }
 ul#login-nav .btn-primary, ul#login-nav .btn-primary:hover, ul#login-nav .btn-warning, ul#login-nav .btn-warning:hover, ul#login-nav .btn-danger, ul#login-nav .btn-danger:hover, ul#login-nav .btn-success, ul#login-nav .btn-success:hover, ul#login-nav .btn-info, ul#login-nav .btn-info:hover, ul#login-nav .btn-inverse, ul#login-nav .btn-inverse:hover {
     color: white;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 ul#login-nav .btn-inverse {
   font-weight: normal;

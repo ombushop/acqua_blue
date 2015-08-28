@@ -146,29 +146,26 @@
 
       <!-- admin bar -->
       {% if current_user %}
-        {% if current_user.is_admin? or current_user.is_wholesale? or current_user.is_customer? or current_user.is_partner? %}
+        {% if current_user.is_admin? or current_user.is_wholesale? or current_user.is_customer? or current_user.has_partner? %}
         <div id="bar-container">
           <ul id="login-nav">
-            <li>
-              <button class="btn btn-inverse dropdown-toggle">
-                <i class="icon-user icon-white"></i> {{ current_user.email }} {% if current_user.is_wholesale? %}(mayorista) {% endif %}
-                {% if current_user.is_admin? %}<span class="caret"></span>{% endif %}
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="/admin/account">Mi cuenta</a></li>
-              </ul>
-            </li>
-              {% if current_user.is_partner? %}
-                <h1>hola</h1>
-              {% endif %}
-
             {% if current_user.is_admin? %}
               <li class="btn-group">
-                <a href="/admin/overview" title="Ir al administrador" class="btn btn-inverse"><i class="icon-briefcase icon-white"></i> Admin</a>
-                <a href="{{ current_path }}" title="Recargar la tienda" class="btn active btn-inverse"><i class="icon-shopping-cart icon-white"></i> Ver tienda</a>
+                <a href="/admin/overview" title="Ir al administrador" class="btn btn-inverse"><i class="icon-briefcase icon-white"></i> Ver Admin</a>
+                <a href="{{ current_path }}" title="Recargar la tienda" class="btn active btn-inverse"><i class="icon-shopping-cart icon-white"></i> Tienda</a>
               </li>
             {% endif %}
-            <li><a href="/logout" class="btn btn-inverse"><i class="icon-off icon-white"></i> Salir</a></li>
+            {% if current_user.has_partner? %}
+              <li><a href="" class="btn btn-inverse"><i class="icon-user icon-white"></i> Ver mi perfil</a></li>
+            {% endif %}
+            <li tabindex="1" class="menu btn btn-inverse dropdown-toggles">
+                <i class="icon-user icon-white"></i> {{ current_user.email }} {% if current_user.is_wholesale? %}(mayorista) {% endif %}
+                {% if current_user.is_admin? %}<span class="caret"></span>{% endif %}
+              <ul class="dropdown-menu">
+                <li><a href="/admin/account">Mi cuenta</a></li>
+                <li><a href="/logout">Salir</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
         {% endif %}
