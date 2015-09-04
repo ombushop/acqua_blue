@@ -1196,6 +1196,12 @@ ul#login-nav [class^="icon-"], ul#login-nav [class*=" icon-"] {
     background-position: 14px 14px;
     background-repeat: no-repeat;
 }
+ul#login-nav .icon-cog {
+    background-position: -432px 0;
+}
+ul#login-nav .icon-home {
+    background-position: 0 -24px;
+}
 ul#login-nav .icon-user {
     background-position: -168px 0;
 }
