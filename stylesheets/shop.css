@@ -360,6 +360,10 @@ li.root > a{
   color: #406DE4;
 }
 
+.parent_category {
+  font-weight: 500 !important;
+}
+
 /* ========================================= */
 /* Breadcrumbs */
 
