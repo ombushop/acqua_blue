@@ -12,7 +12,10 @@
   
   {% if category.children.size != 0 %}
     {% assign categories = category.children %}
-    {% include 'sidebar' %}
+    
+    <ul class="children_list"> 
+      {% include 'sidebar' %}
+    </ul>
   {% endif %}
   
 {% endfor %}
